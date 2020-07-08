@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 import sklearn
 import os
-from run import app as application
+#from run import app as application
 
 app=Flask(__name__)
 model = pickle.load(open('insurance_logistic_reg.pkl','rb'))
@@ -41,5 +41,5 @@ def predict():
 
 if __name__=="__main__":
     port = int(os.environ.get('PORT', 5000))
-    application.run(host='0.0.0.0', port= port)
+    #application.run(host='0.0.0.0', port= port)
     app.run(debug=True)
